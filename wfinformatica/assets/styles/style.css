@@ -6,21 +6,6 @@
   box-sizing: border-box;
 }
 
-/* :root {
-  --bg-color-primary: #07253c;
-  --bg-color-primary: #0d1922;
-  --bg-color-second: #093252;
-  --bg-color-second: #fcfcfc;
-  --font-color: #f6f6f6;
-  --font-color: #858585;
-  --font-color-span: #4581f6;
-  --bg-button: #2e4f92;
-  --font-button: #ffffff;
-  --font-gray: #e7e7e7;
-  --font-gray-light: #ccc;
-  --font-dark: #b6b6b6;
-} */
-
 :root {
   --bg-color: #fcfcfc;
   --feature: #eceaea;
@@ -368,24 +353,21 @@ section.contacts .container .right .info{
   padding: 20px;
 }
 
-section.contacts .container .right .info h2{
-  font-size: 1.6rem;
+section.contacts .container .right .info span{
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
-section.contacts .container .right .info h2:last-child{
+section.contacts .container .right .info span:last-child{
   margin-bottom: 0;
 }
 
-section.contacts .container .right .info span{
-font-weight: 500;
+section.contacts .container .right .info span i{
+  font-weight: 500;
 
-}
-
-.whatsapp{
-  color: #128c7e;
-  font-weight: 600;
-  font-size: 2.5rem;
 }
 
 footer {
