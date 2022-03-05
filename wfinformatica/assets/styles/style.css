@@ -13,12 +13,13 @@
   --second: #4e4e4e;
   --third: #ccc;
   --bg-button: #073ea3;
-  --font-button: #dddddd;
+  --font-button: #ffffff;
   --highlight: #073ea3;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -241,7 +242,7 @@ section.education .container .courses .course .period {
   font-size: 1rem;
   font-weight: 500;
   background-color: var(--bg-button);
-  color: var(--bg-color);
+  color: var(--font-button);
   padding: 2px 5px;
 }
 
