@@ -85,20 +85,22 @@ header .container ul li a {
 
 header .container ul li a:hover {
   color: var(--bg-button);
+  
 }
 
 header .container ul a.contact {
-  background-color: #073ea3;
+  background-color: var(--bg-button);
   color: var(--font-button);
   border-radius: 50px;
   padding: 8px 16px;
   width: 150px;
   height: 40px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header .container ul a.contact:hover {
-  background-color: var(--second);
-  color: var(--font-button);
+  background-color: var(--font-button);
+  color: var(--bg-button);
 }
 
 section.hero .container {
@@ -141,14 +143,15 @@ section.hero .container .left .btn-hire-me {
   padding: 10px;
   border-radius: 50px;
   border: none;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  background-color: #073ea3;
+  background-color: var(--bg-button);
   color: var(--font-button);
 }
 
 section.hero .container .left .btn-hire-me:hover {
-  background-color: var(--second);
+  background-color: var(--font-button);
+  color: var(--bg-button);
 }
 
 section.hero .container .right {
@@ -225,10 +228,9 @@ section.education .container .courses .course {
   border-bottom: 1px solid var(--third);
 }
 
-section.education .container .courses .course:last-child{
+section.education .container .courses .course:last-child {
   border-bottom: none;
   padding-bottom: 0;
-
 }
 
 section.education .container .courses .course .local {
@@ -260,42 +262,41 @@ section.education .container .courses .course .description {
 
 section.portfolio {
   background-color: var(--feature);
- 
 }
 
-section.portfolio .container .cards{
+section.portfolio .container .cards {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 50px;
 }
 
-section.portfolio .container .cards .card{
+section.portfolio .container .cards .card {
   width: 300px;
 }
 
-section.portfolio .container .cards .card img{
+section.portfolio .container .cards .card img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   object-position: center;
 }
 
-section.portfolio .container .cards .card p{
+section.portfolio .container .cards .card p {
   color: var(--second);
   font-size: 1.4rem;
   font-weight: 400;
 }
 
-section.customers .container .brands{
-display: flex;
-justify-content: center;
-gap: 80px;
-text-align: center;
-font-size: 2rem;
+section.customers .container .brands {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  text-align: center;
+  font-size: 2rem;
 }
 
-section.customers .container .brands i{
+section.customers .container .brands i {
   font-size: 12rem;
   color: var(--second);
   display: block;
@@ -305,22 +306,23 @@ section.contacts {
   background-color: var(--feature);
 }
 
-section.contacts .container{
+section.contacts .container {
   display: flex;
   gap: 100px;
 }
 
-section.contacts .container .left{
+section.contacts .container .left {
   width: 400px;
 }
 
-section.contacts .container h1{
-margin-bottom: 30px;
-text-transform: uppercase;
-font-size: 1.8rem;
+section.contacts .container h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
 }
 
-section.contacts .container .left form input, textarea{
+section.contacts .container .left form input,
+textarea {
   background-color: var(--bg-color);
   width: 100%;
   padding: 10px;
@@ -329,9 +331,10 @@ section.contacts .container .left form input, textarea{
   border: none;
   margin-bottom: 10px;
   font-size: 1.4rem;
+  font-family: Popping, sans-serif;
 }
 
-section.contacts .container .left form .btn-send{
+section.contacts .container .left form .btn-send {
   width: 120px;
   height: 40px;
   border-radius: 5px;
@@ -340,21 +343,22 @@ section.contacts .container .left form .btn-send{
   color: var(--font-button);
   font-size: 1.5rem;
   font-weight: 600;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-section.contacts .container .left form .btn-send:hover{
-  background-color: var(--second);
+section.contacts .container .left form .btn-send:hover {
+  background-color: var(--font-button);
+  color: var(--bg-button);
 }
 
-section.contacts .container .right .info{
+section.contacts .container .right .info {
   background-color: var(--bg-color);
   border-radius: 8px;
   padding: 20px;
 }
 
-section.contacts .container .right .info span{
+section.contacts .container .right .info span {
   font-size: 1.8rem;
   margin-bottom: 20px;
   display: block;
@@ -362,13 +366,12 @@ section.contacts .container .right .info span{
   margin-bottom: 20px;
 }
 
-section.contacts .container .right .info span:last-child{
+section.contacts .container .right .info span:last-child {
   margin-bottom: 0;
 }
 
-section.contacts .container .right .info span i{
+section.contacts .container .right .info span i {
   font-weight: 500;
-
 }
 
 footer {
