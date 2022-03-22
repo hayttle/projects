@@ -77,28 +77,350 @@ let cards = [
       },
     },
   },
+  {
+    b1: {
+      name: "GAVIÃO ARQUEIRO",
+      image: "./images/cards/b1.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 6,
+        equipamento: 5,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    b2: {
+      name: "AGENTE HILL",
+      image: "./images/cards/b2.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 4,
+        equipamento: 5,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    b3: {
+      name: "AGENTE COULSON",
+      image: "./images/cards/b3.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 3,
+        equipamento: 5,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    b4: {
+      name: "TONY STARK",
+      image: "./images/cards/b4.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 1,
+        equipamento: 5,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    b5: {
+      name: "BRUCE BANNER",
+      image: "./images/cards/b5.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 1,
+        equipamento: 3,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    b6: {
+      name: "LOKI",
+      image: "./images/cards/b6.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 4,
+        habilidade: 4,
+        equipamento: 5,
+        inteligência: 5,
+      },
+    },
+  },
+  {
+    c1: {
+      name: "CHIRAURI",
+      image: "./images/cards/c1.jpg",
+      attribute: {
+        força: 2,
+        velocidade: 1,
+        habilidade: 2,
+        equipamento: 3,
+        inteligência: 1,
+      },
+    },
+  },
+  {
+    c2: {
+      name: "LEVIATHAN",
+      image: "./images/cards/c2.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 5,
+        habilidade: 1,
+        equipamento: 5,
+        inteligência: 1,
+      },
+    },
+  },
+  {
+    c3: {
+      name: "CAVEIRA VERMELHA",
+      image: "./images/cards/c3.jpg",
+      attribute: {
+        força: 3,
+        velocidade: 2,
+        habilidade: 4,
+        equipamento: 4,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    c4: {
+      name: "SOLDADOS HIDRA",
+      image: "./images/cards/c4.jpg",
+      attribute: {
+        força: 2,
+        velocidade: 1,
+        habilidade: 2,
+        equipamento: 4,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    c5: {
+      name: "CHICOTE NEGRO",
+      image: "./images/cards/c5.jpg",
+      attribute: {
+        força: 2,
+        velocidade: 2,
+        habilidade: 3,
+        equipamento: 4,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    c6: {
+      name: "MONGE DE FERRO",
+      image: "./images/cards/c6.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 4,
+        habilidade: 2,
+        equipamento: 5,
+        inteligência: 4,
+      },
+    },
+  },
+  {
+    d1: {
+      name: "GIGANTE DE GELO",
+      image: "./images/cards/d1.jpg",
+      attribute: {
+        força: 4,
+        velocidade: 3,
+        habilidade: 3,
+        equipamento: 2,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    d2: {
+      name: "ABOMINÁVEL",
+      image: "./images/cards/d2.jpg",
+      attribute: {
+        força: 6,
+        velocidade: 3,
+        habilidade: 3,
+        equipamento: 1,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    d3: {
+      name: "HEIMDALL",
+      image: "./images/cards/d3.jpg",
+      attribute: {
+        força: 4,
+        velocidade: 3,
+        habilidade: 3,
+        equipamento: 3,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    d4: {
+      name: "EMIL BLONSK",
+      image: "./images/cards/d4.jpg",
+      attribute: {
+        força: 2,
+        velocidade: 3,
+        habilidade: 5,
+        equipamento: 2,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    d5: {
+      name: "HOWARD STARK",
+      image: "./images/cards/d5.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 1,
+        habilidade: 2,
+        equipamento: 4,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    d6: {
+      name: "WAR MACHINE",
+      image: "./images/cards/d6.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 5,
+        habilidade: 2,
+        equipamento: 5,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    e1: {
+      name: "HOMEM DE FERRO - Mark V",
+      image: "./images/cards/e1.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 4,
+        habilidade: 2,
+        equipamento: 4,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    e2: {
+      name: "ODIN",
+      image: "./images/cards/e2.jpg",
+      attribute: {
+        força: 5,
+        velocidade: 2,
+        habilidade: 1,
+        equipamento: 6,
+        inteligência: 6,
+      },
+    },
+  },
+  {
+    e3: {
+      name: "SIF",
+      image: "./images/cards/e3.jpg",
+      attribute: {
+        força: 4,
+        velocidade: 2,
+        habilidade: 4,
+        equipamento: 3,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    e4: {
+      name: "DUM DUM DUGAN",
+      image: "./images/cards/e4.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 2,
+        habilidade: 3,
+        equipamento: 2,
+        inteligência: 2,
+      },
+    },
+  },
+  {
+    e5: {
+      name: "BUCKY BARNES",
+      image: "./images/cards/e5.jpg",
+      attribute: {
+        força: 1,
+        velocidade: 2,
+        habilidade: 3,
+        equipamento: 3,
+        inteligência: 3,
+      },
+    },
+  },
+  {
+    e6: {
+      name: "DESTRUIDOR",
+      image: "./images/cards/e6.jpg",
+      attribute: {
+        força: 6,
+        velocidade: 4,
+        habilidade: 3,
+        equipamento: 3,
+        inteligência: 1,
+      },
+    },
+  },
 ];
 
+let selectCountCards = document.getElementById("countCards");
+let btnGiveCards = document.getElementById("giveCards");
 let divCardPlayer = document.getElementById("cardPlayer");
 let divCardMachine = document.getElementById("cardMachine");
 let divOptions = document.getElementById("options");
 let btnNextCard = document.getElementById("btnNextCard");
 let btnViewCards = document.getElementById("viewCards");
-let btnGiveCards = document.getElementById("giveCards");
 let btnRestart = document.getElementById("restart");
 let btnPlay = document.getElementById("play");
 let divResults = document.getElementById("results");
-let imgCardMachine;
-let cardsPlayer = [];
-let cardsMachine = [...cards];
-let cardPlayer;
-let cardMachine;
+let cardPlayer, cardMachine, imgCardMachine, cardsPlayer, cardsMachine;
 let givenCards = false;
+let countCards = "";
+
+selectCountCards.addEventListener("change", () => {
+  countCards = selectCountCards.value;
+});
 
 function giveCards() {
+  if (countCards == "") {
+    alert("Escolha a quantidade de cartas para jogar!");
+    return false;
+  }
+
   if (!givenCards) {
     contentHTML = "";
     results.innerHTML = "";
+    cards = cards.splice(0, countCards);
+    cardsPlayer = [];
+    cardsMachine = [...cards];
     let n = cards.length / 2;
     let interate = cards.length;
     for (i = 0; i < n; i++) {
@@ -107,9 +429,10 @@ function giveCards() {
       interate--;
     }
     results.setAttribute("class", "");
-    results.innerHTML = "Cartas distribuídas. Vamos jogar!";
+    results.innerHTML = countCards + " cartas distribuídas.<br>Vamos jogar!";
     btnGiveCards.style.display = "none";
     btnViewCards.style.display = "block";
+    selectCountCards.disabled = true;
 
     givenCards = true;
   } else {

@@ -41,7 +41,7 @@ main .container {
 }
 
 main .container > h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 3rem;
 }
 
@@ -52,6 +52,27 @@ main .container > p {
   line-height: 2.4rem;
   text-align: justify;
   margin-bottom: 20px;
+}
+
+main .container .countCards{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+main .container .countCards h2 {
+  font-size: 2rem;
+}
+
+#countCards{
+  font-size: 1.4rem;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#countCards:focus{
+  outline: none;
 }
 
 main .container .cards {
@@ -188,3 +209,4 @@ main .container .cards {
   font-weight: 500;
   margin-bottom: 10px;
 }
+
