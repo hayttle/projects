@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+:root {
+  --white: #f9f9f9;
+  --dark: #121212;
+  --green-light: #00df5e;
+  --yellow: #f7df1e;
+  --gray: #828282;
+  --gray-200: #333333;
+  --gray-400: #171717;
+  --gray-400-rgb: 33, 33, 33;
+  --alpha: 0.8;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.content {
+  width: 80%;
+  max-width: 1024px;
+  margin-bottom: 60px;
+}
+
+.content > h2 {
+  text-transform: uppercase;
+  margin-bottom: 60px;
+
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  position: sticky;
+  background-color: var(--gray-400);
+}
+
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+header .content .logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+header .content ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  font-size: 18px;
+}
+
+header .content ul li {
+  cursor: pointer;
+}
+
+header .content ul li a:hover {
+  color: var(--yellow);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+
+main .content .left {
+  width: 337px;
+}
+
+main .content .left h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+span.highlight{
+  color: var(--yellow);
+}
+
+main .content .left h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gray);
+  margin: 14px 0 40px;
+}
+
+main .content .btn-contact {
+  display: block;
+  width: 160px;
+  padding: 10px 14px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dark);
+  background-color: var(--yellow);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+main .content .btn-contact:hover {
+  background-color: var(--gray-400);
+  color: var(--yellow);
+}
+
+main .content .right img {
+  max-width: 350px;
+}
+
+section.about-me {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray-400);
+}
+
+section.about-me .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.about-me h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+section.about-me p {
+  max-width: 745px;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 32px;
+  text-align: center;
+}
+
+section.contacts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.contacts .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+section.contacts .content div.contact a{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 170px;
+  height: 150px;
+}
+
+section.contacts div.contact div.icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-400);
+  border-radius: 31px;
+}
+
+section.contacts div.contact div.icon i {
+  font-size: 32px;
+  color: var(--yellow);
+}
+
+section.contacts span.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-top: 19px;
+}
+
+section.contacts span.description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+section.projects {
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray-400);
+  width: 100%;
+}
+
+section.projects .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.projects .content h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+section.projects .content div.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+section.projects .content div.card {
+  width: 325px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  border: 1px solid var(--gray-400);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section.projects div.cards div.card div.img-project {
+  width: 300px;
+  height: 130px;
+  background-color: var(--dark);
+  border: 1px solid var(--gray-200);
+  margin-bottom: 14px;
+}
+
+section.projects div.cards div.card div.description-project {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section.projects div.cards div.card div.description-project span.title-project {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+section.projects div.cards div.card span.tags-project {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+section.services {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.services .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.services h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+section.services div.cards-services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+section.services div.cards-services div.card-service {
+  width: 180px;
+  height: 180px;
+  background-color: var(--gray-400);
+  padding: 30px;
+  border-bottom: 5px solid var(--yellow);
+  border-radius: 5px;
+}
+
+section.services div.cards-services div.card-service i {
+  font-size: 40px;
+  color: var(--yellow);
+  margin-bottom: 30px;
+}
+
+section.services div.cards-services div.card-service h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+section.skills {
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray-400);
+  width: 100%;
+}
+
+section.skills .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.skills h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+section.skills div.cards-skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 51px;
+}
+
+section.skills div.cards-skills div.card-skill {
+  width: 180px;
+  height: 180px;
+  background-color: var(--dark);
+  border: 1px solid var(--gray-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+section.skills div.cards-skills div.card-skill i {
+  font-size: 6rem;
+  color: var(--yellow);
+}
+
+section.skills div.cards-skills div.card-skill span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gray);
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+footer .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+footer span {
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+footer span a {
+  color: var(--yellow);
+}
+
+div.goto-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--dark);
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+}
+
+div.goto-top i {
+  font-size: 25px;
+  color: var(--yellow);
+}
+
+.target::before{
+  content: '';
+  display: block;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+  }
+  header .content ul {
+    display: none;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  main .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .right {
+    display: flex;
+    justify-content: center;
+  }
+
+  main .right img {
+    max-width: 50%;
+  }
+
+  main .left h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  main .left h2 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  section.about-me {
+  }
+
+  section.contacts {
+    gap: 0px;
+    margin: 60px 0;
+  }
+
+  section.projects {
+  }
+
+  section.services {
+  }
+
+  section.skills {
+  }
+
+  section.skills div.cards-skills {
+    gap: 25px;
+  }
+
+  section.skills div.cards-skills div.card-skill {
+    width: 85px;
+    height: 75px;
+  }
+
+  section.skills div.cards-skills div.card-skill i {
+    font-size: 3rem;
+  }
+}

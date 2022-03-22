@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  /* max-width: 1024px; */
+  margin: auto;
+  
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+header {
+  background-color: chocolate;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  color: #fff;
+  font-weight: 600;
+  list-style: none;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.hero .container .left {
+  width: 50%;
+}
+
+.hero .container h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero .container h1 span {
+  color: chocolate;
+}
+
+.hero .container p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero .container button {
+  font-size: 1.4rem;
+  background-color: chocolate;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero .container button:hover {
+  background-color: rgb(189, 81, 4);
+}
+
+.projects {
+  background-color: chocolate;
+}
+
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  align-items: center;
+}
+
+.projects .container h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.projects-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.projects-cards-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(168, 168, 168);
+  border-radius: 5px;
+  /* padding: 5px; */
+  overflow: hidden;
+}
+
+.projects-cards-item .thumb {
+  width: 200px;
+  height: 150px;
+}
+
+.projects-cards-item .description span {
+  display: block;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.projects-cards-item .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-cards-item button {
+  background-color: bisque;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  width: 40%;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 1.4rem;
+}
+
+footer .container a {
+  color: black;
+}
