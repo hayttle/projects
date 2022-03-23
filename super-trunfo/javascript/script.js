@@ -472,7 +472,7 @@ function nextCardPlayer() {
       `;
     for (let attribute in data.attribute) {
       optionsHTML += `<p class="attribute">
-        <input type="radio" id="${attribute}" name="atributo" value="${attribute}"><label for="${attribute}">${attribute} - ${data.attribute[attribute]}</label>
+        <input type="radio" id="${attribute}" name="atributo" value="${attribute}"><label for="${attribute}">${attribute}</label>
         </p>
         `;
     }
