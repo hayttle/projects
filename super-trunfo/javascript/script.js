@@ -468,7 +468,7 @@ function nextCardPlayer() {
       <img src="${data.image}" id="imgCardPlayer">
       `;
     optionsHTML = `
-      <h2>Escolha seu power!</h2>
+      <h2 class="titlePower">Escolha seu poder!</h2>
       `;
     for (let attribute in data.attribute) {
       optionsHTML += `<p class="attribute">
@@ -476,6 +476,12 @@ function nextCardPlayer() {
         </p>
         `;
     }
+    optionsHTML += `
+    <div class="countUpdatedCards">
+      <h1>Cartas</h1>
+      <h2>${cardsPlayer.length} X ${cardsMachine.length}</h2>
+    <div>
+    `;
   }
   divCardPlayer.innerHTML = contentHTML;
   divOptions.innerHTML = optionsHTML;
