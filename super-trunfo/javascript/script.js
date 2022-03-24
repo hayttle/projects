@@ -404,6 +404,7 @@ let divResults = document.getElementById("results");
 let cardPlayer, cardMachine, imgCardMachine, cardsPlayer, cardsMachine;
 let givenCards = false;
 let countCards = "";
+let newCards = [];
 
 selectCountCards.addEventListener("change", () => {
   countCards = selectCountCards.value;
@@ -418,7 +419,13 @@ function giveCards() {
   if (!givenCards) {
     contentHTML = "";
     results.innerHTML = "";
-    cards = cards.splice(0, countCards);
+
+    for (let i = 0; i < countCards; i++) {
+      let idx = Math.floor(Math.random() * cards.length);
+      newCards.push(cards[idx]);
+      cards.splice(idx, 1);
+    }
+    cards = newCards;
     cardsPlayer = [];
     cardsMachine = [...cards];
     let n = cards.length / 2;
@@ -441,14 +448,12 @@ function giveCards() {
 }
 
 function getCardPlayer() {
-  // let index = parseInt(Math.random() * cardsPlayer.length);
   index = 0;
   cardPlayer = cardsPlayer[index];
   return cardPlayer;
 }
 
 function getCardMachine() {
-  // let index = parseInt(Math.random() * cardsMachine.length);
   index = 0;
   cardMachine = cardsMachine[index];
   return cardMachine;
@@ -483,11 +488,11 @@ function nextCardPlayer() {
     <div>
     `;
   }
+  viewCardMachine();
   divCardPlayer.innerHTML = contentHTML;
   divOptions.innerHTML = optionsHTML;
   btnNextCard.style.display = "none";
   btnPlay.style.display = "block";
-  viewCardMachine();
 }
 
 function viewCardMachine() {
@@ -521,71 +526,90 @@ function play() {
   let powerMachine;
   let attribute;
   let status;
-  let cardMachine = getCardMachine();
-  input = document.getElementsByName("atributo");
-  input.forEach((element) => {
-    if (element.checked) {
-      attribute = element.value;
-    }
-  });
-  if (!attribute) {
-    alert("Escolha seu poder!");
+
+  let initialsPlayer = ["b", "c", "d", "e"].some((word) =>
+    Object.keys(cardPlayer)[0].startsWith(word)
+  );
+
+  let initialsMachine = ["b", "c", "d", "e"].some((word) =>
+    Object.keys(cardMachine)[0].startsWith(word)
+  );
+
+  if (Object.keys(cardPlayer)[0] == "a1" && initialsMachine) {
+    status = "Você venceu com a carta Super Trunfo";
+    results.classList.add("wonMatch");
+    const element = cardsPlayer.splice(0, 1)[0];
+    cardsPlayer.splice(cardsPlayer.length, 0, element);
+    cardsPlayer.push(cardsMachine.splice(0, 1)[0]);
+  } else if (initialsPlayer && Object.keys(cardMachine)[0] == "a1") {
+    status = "Você perdeu para a carta Super Trunfo";
+    results.classList.add("loseMatch");
+    const element = cardsMachine.splice(0, 1)[0];
+    cardsMachine.splice(cardsMachine.length, 0, element);
+    cardsMachine.push(cardsPlayer.splice(0, 1)[0]);
   } else {
-    for (let attrib in cardPlayer) {
-      powerPlayer = cardPlayer[attrib].attribute[attribute];
-    }
-
-    for (let attrib in cardMachine) {
-      powerMachine = cardMachine[attrib].attribute[attribute];
-    }
-
-    if (powerPlayer > powerMachine) {
-      status = "Você ganhou!";
-      results.classList.add("wonMatch");
-
-      const element = cardsPlayer.splice(0, 1)[0];
-
-      cardsPlayer.splice(cardsPlayer.length, 0, element);
-
-      cardsPlayer.push(cardsMachine.splice(0, 1)[0]);
-    } else if (powerPlayer < powerMachine) {
-      status = "Você perdeu!";
-      results.classList.add("loseMatch");
-
-      const element = cardsMachine.splice(0, 1)[0];
-
-      cardsMachine.splice(cardsMachine.length, 0, element);
-
-      cardsMachine.push(cardsPlayer.splice(0, 1)[0]);
+    input = document.getElementsByName("atributo");
+    input.forEach((element) => {
+      if (element.checked) {
+        attribute = element.value;
+      }
+    });
+    if (!attribute) {
+      alert("Escolha seu poder!");
     } else {
-      status = "Empatou!";
-      results.classList.add("tiedMatch");
+      for (let attrib in cardPlayer) {
+        powerPlayer = cardPlayer[attrib].attribute[attribute];
+      }
 
-      const elem = cardsPlayer.splice(0, 1)[0];
-      cardsPlayer.splice(cardsPlayer.length, 0, elem);
+      for (let attrib in cardMachine) {
+        powerMachine = cardMachine[attrib].attribute[attribute];
+      }
 
-      const element = cardsMachine.splice(0, 1)[0];
-      cardsMachine.splice(cardsMachine.length, 0, element);
+      if (powerPlayer > powerMachine) {
+        status = "Você ganhou!";
+        results.classList.add("wonMatch");
+
+        const element = cardsPlayer.splice(0, 1)[0];
+        cardsPlayer.splice(cardsPlayer.length, 0, element);
+        cardsPlayer.push(cardsMachine.splice(0, 1)[0]);
+      } else if (powerPlayer < powerMachine) {
+        status = "Você perdeu!";
+        results.classList.add("loseMatch");
+
+        const element = cardsMachine.splice(0, 1)[0];
+        cardsMachine.splice(cardsMachine.length, 0, element);
+        cardsMachine.push(cardsPlayer.splice(0, 1)[0]);
+      } else {
+        status = "Empatou!";
+        results.classList.add("tiedMatch");
+
+        const elem = cardsPlayer.splice(0, 1)[0];
+        cardsPlayer.splice(cardsPlayer.length, 0, elem);
+
+        const element = cardsMachine.splice(0, 1)[0];
+        cardsMachine.splice(cardsMachine.length, 0, element);
+      }
     }
-    imgCardMachine = document.getElementById("imgCardMachine");
-    imgCardMachine.classList.remove("blured");
-    btnPlay.style.display = "none";
-    if (cardsPlayer.length == 0) {
-      status = "Você perdeu a partida!";
-      divOptions.style.display = "none";
-      document.getElementById("middle").style.justifyContent = "center";
-      results.classList.add("loseMatch");
-      btnRestart.style.display = "block";
-    } else if (cardsMachine.length == 0) {
-      status = "Parabéns, você venceu a partida!";
-      divOptions.style.display = "none";
-      document.getElementById("middle").style.justifyContent = "center";
-      results.classList.add("wonMatch");
-      btnRestart.style.display = "block";
-    } else {
-      btnNextCard.style.display = "block";
-    }
-
-    divResults.innerHTML = status;
   }
+
+  imgCardMachine = document.getElementById("imgCardMachine");
+  imgCardMachine.classList.remove("blured");
+  btnPlay.style.display = "none";
+  if (cardsPlayer.length == 0) {
+    status = "Você perdeu a partida!";
+    divOptions.style.display = "none";
+    document.getElementById("middle").style.justifyContent = "center";
+    results.classList.add("loseMatch");
+    btnRestart.style.display = "block";
+  } else if (cardsMachine.length == 0) {
+    status = "Parabéns, você venceu a partida!";
+    divOptions.style.display = "none";
+    document.getElementById("middle").style.justifyContent = "center";
+    results.classList.add("wonMatch");
+    btnRestart.style.display = "block";
+  } else {
+    btnNextCard.style.display = "block";
+  }
+
+  divResults.innerHTML = status;
 }

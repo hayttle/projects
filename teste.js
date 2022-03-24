@@ -24,8 +24,50 @@ let carros = ["fusca", "gol", "opala", "chevette"];
 
 // console.log(arr); // 👉️ ['js', 'ts', 'css']
 
-let novosCarros = [];
+// let novosCarros = [];
 
-let n = 3;
-novosCarros = carros.splice(0, n);
-console.log(novosCarros)
+// let n = 3;
+// novosCarros = carros.splice(0, n);
+// console.log(novosCarros)
+
+// let obj = {
+//   a1: {
+//     name: "CAPITÃO AMÉRICA",
+//     image: "./images/cards/a2.jpg",
+//     attribute: {
+//       força: 3,
+//       velocidade: 2,
+//       habilidade: 6,
+//       equipamento: 2,
+//       inteligência: 3,
+//     },
+//   },
+// };
+
+// console.log(Object.keys(obj)[0] == 'a1');
+
+// let arr = [1, 2, 3];
+
+// [a, b, c] = arr;
+
+// console.log(arr);
+
+
+var items = [1, 2, 3, 4, 5];
+var newItems = [];
+
+for (var i = 0; i < 3; i++) {
+  var idx = Math.floor(Math.random() * items.length);
+  newItems.push(items[idx]);
+  items.splice(idx, 1);
+}
+
+console.log(newItems);
+
+
+
+
+
+
+
+
