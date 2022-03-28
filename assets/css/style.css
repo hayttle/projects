@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: #020000;
+  --dark-middle: #0f0f0f;
+  --dark-light: #3f3f3f;
+  --blue-alpha: rgba(0, 93, 146, 0.8);
+  --font-dark: #020000;
+  --font-light: #fff;
+  --gray-dark: #696969;
+  --gray: #a8a8a8;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: auto;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+header {
+  background-color: var(--dark);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+header .logo {
+  color: var(--font-light);
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+}
+
+ul a {
+  text-decoration: none;
+  color: var(--font-light);
+  font-size: 2.8rem;
+  padding: 10px;
+}
+
+ul a:hover {
+  color: var(--gray-dark);
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.hero .container .left {
+  width: 50%;
+}
+
+.hero .container .left h1.title {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.hero .container .left h2.subtitle {
+  color: var(--gray-dark);
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.hero .container .left p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero .container .left button {
+  font-size: 1.4rem;
+  background-color: var(--dark);
+  color: var(--font-light);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hero .container .left button:hover {
+  background-color: var(--dark-light);
+}
+
+.hero .container .right img {
+  max-width: 300px;
+  clip-path: circle();
+}
+
+.projects {
+  background-color: var(--dark);
+}
+
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 50px;
+  align-items: center;
+}
+
+.projects .container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: var(--font-light);
+  text-transform: uppercase;
+}
+
+.projects-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.projects-cards-item {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-middle);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.projects-cards-item .thumb {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.projects-cards-item .thumb img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.projects-cards-item .thumb a {
+  text-decoration: none;
+  background-color: var(--blue-alpha);
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: var(--font-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+}
+
+.projects-cards-item .thumb a:hover {
+  background-color: var(--dark-light);
+}
+
+.projects-cards-item .description {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+  gap: 4px;
+}
+
+.projects-cards-item .description h3 {
+  color: var(--font-light);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.projects-cards-item .description h3::after {
+  display: block;
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--gray-dark);
+}
+
+.projects-cards-item .description span {
+  color: var(--font-light);
+  font-size: 1.2rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 1.4rem;
+}
+
+footer .container a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.highlight {
+  font-weight: 600;
+}
