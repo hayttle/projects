@@ -178,8 +178,13 @@ td.product-item-product > div {
 }
 
 p.product-item-product-description-title {
+  font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 8px;
+}
+
+p.product-item-product-description-measure {
+  font-size: 1.4rem;
 }
 
 td.product-item-price {
