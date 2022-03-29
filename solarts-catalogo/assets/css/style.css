@@ -45,6 +45,10 @@ header .container .logo {
   font-weight: 600;
 }
 
+header .container .logo  br{
+  display: none;
+}
+
 header .container ul {
   display: flex;
   align-items: center;
@@ -92,7 +96,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  width: 400px;
+  max-width: 400px;
   border-radius: 40px;
 }
 .hero p {
@@ -110,6 +114,7 @@ main {
 .hero ul {
   font-size: 1.6rem;
   margin-bottom: 20px;
+  line-height: 2.4rem;
 }
 
 .hero ul li {
@@ -124,10 +129,15 @@ main {
   background-color: #f1f1f1;
 }
 
+.products-list table td {
+  font-size: 1.4rem;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  padding: 8px 5px;
+}
 .products-list table,
 th,
-tr,
-td {
+tr {
   width: 100%;
   font-size: 1.4rem;
   border-collapse: collapse;
@@ -206,6 +216,9 @@ footer {
   background-color: var(--orange);
   font-size: 1.4rem;
 }
+footer br{
+  display: none;
+}
 
 footer .container {
   height: 60px;
@@ -218,4 +231,89 @@ footer .container a {
   font-weight: 600;
   color: #000;
   text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    min-width: 100%;
+    padding: 5px 10px;
+  }
+
+  header {
+    padding: 0 5px;
+  }
+
+  header .container .logo {
+    line-height: 2.4rem;
+    font-size: 1.8rem;
+  }
+  header .container .logo br{
+    display: block;
+  }
+  header .container ul {
+    font-size: 2.8rem;
+    gap: 2px;
+  }
+
+  header .container ul li a{
+    padding: 5px;
+  }
+header .container ul li#cart{
+  margin-left: 0;
+  font-size: 1.4rem;
+}
+  .container {
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .hero .right {
+    display: none;
+  }
+
+  table,
+  table tbody,
+  table th,
+  table td,
+  table tr {
+    display: block;
+  }
+
+  .products-list table, th, tr{
+    border: 0;
+  }
+
+  table tr.product-header {
+    display: none;
+  }
+  .product-list {
+    width: 100%;
+  }
+  .products-list table {
+    position: unset;
+  }
+
+  .products-list table,
+  th,
+  tr {
+    width: unset;
+  }
+  table tr.product-item td {
+    display: block;
+  }
+  .product-list td {
+    margin: 0 0 20px;
+  }
+
+  footer{
+    text-align: center;
+    line-height: 2.0rem;
+  }
+  footer br{
+    display: block;
+  }
 }
