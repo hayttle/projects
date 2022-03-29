@@ -381,4 +381,8 @@ footer .container a {
     transform: scale(4) translate(46%);
     transition: all 0.5s ease;
   }
+
+  p.product-item-product-description-title {
+    font-size: 1.6rem;
+  }
 }
