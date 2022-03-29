@@ -98,7 +98,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  max-width: 400px;
+  width: 400px;
   border-radius: 40px;
 }
 .hero p {
