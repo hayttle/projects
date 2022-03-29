@@ -179,6 +179,7 @@ td.product-item-product > div {
 
 p.product-item-product-description-title {
   font-weight: 500;
+  margin-bottom: 8px;
 }
 
 td.product-item-price {
@@ -372,7 +373,7 @@ footer .container a {
   }
 
   .product-item img:hover {
-    transform: scale(4) translate(48%);
+    transform: scale(4) translate(46%);
     transition: all 0.5s ease;
   }
 }
