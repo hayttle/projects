@@ -51,10 +51,6 @@ header .container .logo {
   font-weight: 600;
 }
 
-header .container .logo img {
-  width: 40px;
-}
-
 header .container ul {
   display: flex;
   align-items: center;
