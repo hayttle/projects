@@ -50,6 +50,9 @@ header .container .logo {
   font-size: 2.2rem;
   font-weight: 600;
 }
+header .container .logo br{
+  display: none;
+}
 
 header .container ul {
   display: flex;
@@ -268,10 +271,9 @@ footer .container a {
     padding: 5px 0;
   }
 
-  header .container .logo {
-    line-height: 2.4rem;
-    font-size: 1.8rem;
-  }
+header .container .logo br{
+  display: block;
+}
 
   header .container ul {
     font-size: 2.8rem;
@@ -390,7 +392,7 @@ footer .container a {
   }
 
   header .container .logo {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     gap: 2px;
   }
 
